@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(228, 187, 129);
+}
+#row1{
+    color: rgb(13, 124, 17);
+    background-color: bisque;
+    text-size-adjust: 20%;
+}
+#row2,#row3,#table1,th{
+    text-align: center;
+}
+#row3{
+    padding: 100;
+}
+th{
+    text-align: right;
+}
+#row3{
+    background-color: chocolate
+}
+img{
+    width:60%;
+    max-width: 200px;
+
+}
+#header{
+    text-align: left;
+}
+.button{
+    background-color: #4CAF50;
+    border: none;
+    border-radius:3%;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <title>JavaScript</title>
+    <style>
+     table{
+         margin-top:10%;
+         width: 90%;
+         height:80%;
+         max-width: 800px;
+     }
+     th{
+         background-color: aquamarine;
+     }
+     td{
+         text-align: center;
+         font-weight: bolder;
+         width: 25%;
+     }
+     tr{
+         height: 80px;
+     }
+    </style>
+<body>
+    <table border="1" cellspacing="0" width="80%" align="center">
+        <tr><th>X</th><th>X^2</th><th>1/X</th><th>√𝒙</th></tr>
+        <script type="text/javascript">
+            for(var x=1.00;x<=5.00;x++){
+                document.write("<tr><td>"+x.toFixed(3)+"</td><td>"+(x*x).toFixed(3)+"</td>"+"<td>"+(1/x).toFixed(3)+"</td><td>"+Math.sqrt(x).toFixed(3)+"</td></tr>");
+            } 
+        </script>
+   </table>    
+</body>
+</html>

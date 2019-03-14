@@ -1,0 +1,19 @@
+ #me{
+            border-radius: 70%;
+            border-width: medium;
+            width: 25%;
+            max-width: 150px;
+        }
+        h4,h5{
+            font-family: fantasy;
+            font-weight: bolder;
+            font-size:130%;
+            color: bisque;
+        }
+        h4{
+            font-size: 160%;
+            margin-top: -1px;
+            }
+    a{
+        color: antiquewhite;
+    }

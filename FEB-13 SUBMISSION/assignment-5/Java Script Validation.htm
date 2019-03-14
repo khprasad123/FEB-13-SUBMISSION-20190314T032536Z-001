@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)file:///Users/hariprasadkottarathil/GDipSA/FEB-13%20SUBMISSION/assignment-7/q6.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Java Script Validation</title>
+    <script type="text/javascript">
+        function validateForm(){
+            var name[]=document.getElementsByName("name").values;
+            var age=document.getElementsByName("age");
+            var gender=document.getElementsByName("gender");
+            var phone=document.getElementsByName("phome");
+            alert(name[0]);
+           
+        }
+    </script>
+</head>
+<body>
+         <table>
+                    <tbody><tr><th>Name</th><td><input type="text" name="name"></td></tr>
+                    <tr><th>Age</th><td><input type="number" name="age"></td></tr>
+                    <tr><th>Gender</th><td><input type="radio" name="gender" value="male" checked="checked">Male
+                        <input type="radio" name="Gender" value="female">Female</td></tr>
+                    <tr><th>Phone</th><td><input type="tel" name="phone"></td></tr>
+                    <tr><th>Hobbies</th><td><input type="checkbox" name="hobbies" value="Reading">Reading
+                        <input type="checkbox" name="hobbies" value="Sports">Sports
+                        <input type="checkbox" name="hobbies" value="Movies">Movies
+                        <input type="checkbox" name="hobbies" value="Sports">Sports
+                        <input type="checkbox" name="hobbies" value="Travelling">Travelling</td>
+                    </tr>
+                    <tr><td><input type="submit" name="submit" value="Submit" onclick="validateForm()"></td></tr>
+                    <tr><td>Output</td><td><input id="output" type="text" name="output"></td></tr>
+                    <tr><td>Errors</td><td><input id="errors" type="text" name="errors"></td></tr>
+            </tbody></table>
+    
+
+
+
+</body></html>

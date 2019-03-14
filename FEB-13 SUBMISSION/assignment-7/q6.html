@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+    <title>Java Script Validation</title>
+    <script type="text/javascript">
+        function validateForm(){
+           var namel=document.getElementById("name").value;
+           var age=document.getElementById("age").value;
+           var gender=document.getElementsByName("gender");
+           var phone=document.getElementById("phone").value;
+           var hobbies=document.getElementsByName("hobbies");
+           var flag=false;
+           if(namel.length>14){
+               document.getElementById("errors").value+="Name should be no more than 15 letters long\n";
+               flag=true;  
+           }
+           else if(namel.length<=0){
+               document.getElementById("errors").value+="Name should not be blank.\n";
+                flag=true;  
+           }
+           if(isNaN(age)){
+            document.getElementById("errors").value+="Age should be numeric.\n";
+            flag=true;
+           }
+           if(isNaN(phone)){
+            document.getElementById("errors").value+="Phone number should be numeric.\n";
+            flag=true;
+           }
+           if(age<=0){
+               document.getElementById("errors").value+="Age should not be negative number or blank\n";
+                flag=true;
+            }
+            if(gender[0].checked==false && gender[1].checked==false){
+                document.getElementById("errors").value+="Gender must be selected (cannot leave both blank)\n";
+                flag=true;
+            }
+            if(!flag){
+                document.getElementById("output").value+="Name : "+namel+"\n"+"Age : "+age+"\nGender : ";
+                if(gender[0].checked)
+                    document.getElementById("output").value+="Male\n";
+                else    
+                    document.getElementById("output").value+="Female\n";
+
+                document.getElementById("output").value+="Phone : "+phone+"\nHobbies : ";
+                for(var i=0;i<hobbies.length;i++){
+                    if(hobbies[i].checked==true){
+                        document.getElementById("output").value+=hobbies[i].value+" ";
+                    }
+                }
+                
+            }
+        }
+    </script>
+    <style>
+        table{
+            margin-top: 130px;
+        }
+        th{
+            text-align: center;
+        }
+        td{
+            text-align: left;
+        }
+        #button{
+            background-color: rgb(33, 199, 58);
+            border: none;
+            border-radius:3%;
+            color: rgb(255, 255, 255);
+            padding: 8px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 9px 30px;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body >
+<table align="center" cellspacing="30" >      
+                    <tr><th >Name</th><td><input type="text" id="name" size="50"></td></tr>
+                    <tr><th>Age</th><td><input type="text" id="age"size="3"></td></tr>
+                    <tr><th>Gender</th><td><input type="radio" name="gender" id="male">Male
+                            <input type="radio" name="gender" id="female">Female</td></tr>
+                    <tr><th>Phone</th><td><input type="tel" id="phone" size="20"></td></tr>
+                    <tr><th>Hobbies</th><td><input type="checkbox" name="hobbies" value="Reading">Reading
+                        <input type="checkbox" name="hobbies" value="Sports">Sports
+                        <input type="checkbox" name="hobbies" value="Movies">Movies
+                        <input type="checkbox" name="hobbies" value="Travelling">Travelling</td>
+                    </tr>
+                    <tr><td><input type="submit" id="button" value="Submit" onclick="validateForm()"></td><td></td></tr>
+                    <tr height="200px" ><th>Output</th><td><textarea id="output" rows="12" cols="100"readonly></textarea></td></tr>
+                    <tr height="200px"><th>Errors</th><td><textarea id="errors" rows="8" cols="100" readonly ></textarea></td></tr>
+</table>
+    
+
+</body>
+
+</html>
